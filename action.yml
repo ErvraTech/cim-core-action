@@ -1,5 +1,5 @@
 name: "CIM-Core Analysis"
-description: "Run CIM-Core dynamic analysis on any dataset through a simple GitHub Action."
+description: "Run CIM-Core adaptive analysis directly inside GitHub workflows."
 author: "ErvraTech"
 
 branding:
@@ -8,16 +8,16 @@ branding:
 
 inputs:
   api_key:
-    description: "CIM-Core API key (store in GitHub Secrets)."
+    description: "Your CIM-Core API key (store in GitHub Secrets)."
     required: true
   data_path:
-    description: "Path to dataset (.csv, .json)."
+    description: "Path to the input dataset (.csv / .json)."
     required: true
   config_file:
-    description: "Optional CIM configuration file."
+    description: "Optional path to a CIM-Core configuration file."
     required: false
   endpoint:
-    description: "API endpoint for CIM-Core."
+    description: "CIM-Core API endpoint URL."
     required: false
     default: "https://api.cim-core.com/analyze"
 
