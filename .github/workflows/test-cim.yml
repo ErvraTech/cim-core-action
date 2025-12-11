@@ -4,26 +4,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  run-cim:
+  hello:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Create sample data
-        run: |
-          mkdir -p data
-          cat > data/input.csv <<EOF
-time,value
-0,1.0
-1,1.5
-2,0.9
-3,1.2
-EOF
-
-      - name: Run CIM-Core Action
-        uses: ErvraTech/cim-core-action@main
-        with:
-          api_key: ${{ secrets.CIM_API_KEY }}
-          data_path: data/input.csv
-          endpoint: https://httpbin.org/post
+      - name: Say hello
+        run: echo "Hello from CIM-Core workflow"
