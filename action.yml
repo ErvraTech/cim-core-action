@@ -1,6 +1,7 @@
 name: "CIM-Core Analysis"
 description: "Run CIM-Core dynamic analysis on any dataset through a simple GitHub Action."
 author: "ErvraTech"
+
 branding:
   icon: "cpu"
   color: "blue"
