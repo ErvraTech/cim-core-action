@@ -1,9 +1,13 @@
 FROM python:3.10-slim
 
-WORKDIR /app
+# On se place dans le workspace GitHub
+WORKDIR /github/workspace
 
-COPY entrypoint.py /app/entrypoint.py
+# On copie seulement le script d'entrée
+COPY entrypoint.py /github/workspace/entrypoint.py
 
-RUN pip install requests pandas
+# Dépendances Python
+RUN pip install --no-cache-dir requests pandas
 
-ENTRYPOINT ["python", "/app/entrypoint.py"]
+# Lancer le script
+ENTRYPOINT ["python", "/github/workspace/entrypoint.py"]
