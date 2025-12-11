@@ -28,4 +28,3 @@ EOF
           api_key: ${{ secrets.CIM_API_KEY }}
           data_path: data/input.csv
           endpoint: https://httpbin.org/post
-
